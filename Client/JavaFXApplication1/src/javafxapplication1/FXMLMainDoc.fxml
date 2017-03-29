@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLMainDocController">
+   <children>
+      <TextArea fx:id="senderArea" layoutX="341.0" layoutY="316.0" prefHeight="70.0" prefWidth="192.0" visible="false" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="89.0">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font></TextArea>
+      <Button layoutX="540.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleButtonActionSendMessage" text="Отправить" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="7.0" />
+      <ScrollPane fx:id="scrlPane" hbarPolicy="NEVER" hmax="0.0" layoutX="341.0" layoutY="474.0" prefHeight="141.0" prefWidth="263.0" visible="false" vmax="1.231312312312E12" vvalue="1.0" AnchorPane.bottomAnchor="91.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="474.0">
+         <content>
+            <VBox fx:id="box" prefHeight="286.0" prefWidth="248.0" visible="false" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="645.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleButtonActionSendImage" prefHeight="25.0" prefWidth="75.0" text="Картинка" visible="false" AnchorPane.bottomAnchor="49.0" AnchorPane.rightAnchor="7.0" />
+      <ImageView fx:id="recivedCamFirst" fitHeight="150.0" fitWidth="150.0" layoutX="421.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="421.0" AnchorPane.rightAnchor="612.0" AnchorPane.topAnchor="14.0" />
+      <ImageView fx:id="recivedCamSecond" fitHeight="150.0" fitWidth="150.0" layoutX="612.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="14.0" />
+      <ImageView fx:id="recivedCamThird" fitHeight="150.0" fitWidth="150.0" layoutX="1019.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="278.0" />
+      <ImageView fx:id="recivedCamFourth" fitHeight="150.0" fitWidth="150.0" layoutX="612.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="540.0" />
+      <ImageView fx:id="recivedCamFifth" fitHeight="150.0" fitWidth="150.0" layoutX="421.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="421.0" AnchorPane.topAnchor="540.0" />
+      <ImageView fx:id="recivedCamSixth" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="278.0" />
+      <Button fx:id="btnCamreaStart" layoutX="286.0" layoutY="620.0" mnemonicParsing="false" onAction="#handleButtonActionStartWebCamStream" text="Включить камеру" AnchorPane.leftAnchor="286.0" AnchorPane.topAnchor="620.0" />
+      <Button fx:id="btnCamreaStop" layoutX="273.0" layoutY="620.0" mnemonicParsing="false" onAction="#handleButtonActionStopWebCamStream" prefHeight="25.0" prefWidth="140.0" text="Выключить камеру" visible="false" AnchorPane.leftAnchor="273.0" AnchorPane.topAnchor="620.0" />
+      <Button fx:id="btnMicroStart" layoutX="273.0" layoutY="655.0" mnemonicParsing="false" onAction="#handleButtonActionStartMicroStream" prefHeight="25.0" prefWidth="140.0" text="Включить микрофон" AnchorPane.leftAnchor="273.0" AnchorPane.topAnchor="655.0" />
+      <Button fx:id="btnMicroStop" layoutX="273.0" layoutY="655.0" mnemonicParsing="false" onAction="#handleButtonActionStopMicroStream" text="Выключить микрофон" visible="false" AnchorPane.leftAnchor="273.0" AnchorPane.topAnchor="655.0" />
+      <ChoiceBox fx:id="cBox" layoutX="227.0" layoutY="272.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="waitField" layoutX="476.0" layoutY="420.0" visible="false" />
+      <Label fx:id="conLabel" layoutX="588.0" layoutY="238.0" />
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="448.0" layoutY="345.0" textOverrun="CENTER_WORD_ELLIPSIS" />
+      <Button fx:id="chooseBtn1" layoutX="465.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleButtonActionVote1" text="Выбрать" visible="false" />
+      <Button fx:id="chooseBtn2" layoutX="656.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleButtonActionVote2" text="Выбрать" visible="false" />
+      <Button fx:id="chooseBtn3" layoutX="935.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleButtonActionVote3" text="Выбрать" visible="false" />
+      <Button fx:id="chooseBtn4" layoutX="656.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonActionVote4" text="Выбрать" visible="false" />
+      <Button fx:id="chooseBtn5" layoutX="465.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonActionVote5" text="Выбрать" visible="false" />
+      <Button fx:id="chooseBtn6" layoutX="182.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleButtonActionVote6" text="Выбрать" visible="false" />
+      <Label fx:id="timeLabel" layoutX="788.0" layoutY="466.0" text="Label" visible="false" />
+      <Button fx:id="continueButton" layoutX="517.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleButtonActionContinue" prefHeight="25.0" prefWidth="150.0" text="Передать право голоса" visible="false" />
+      <Label fx:id="stateLabel1" layoutX="482.0" layoutY="171.0" text="Жив" visible="false" />
+      <Label fx:id="stateLabel2" layoutX="674.0" layoutY="171.0" text="Жив" visible="false" />
+      <Label fx:id="stateLabel3" layoutX="1080.0" layoutY="437.0" text="Жив" visible="false" />
+      <Label fx:id="stateLabel4" layoutX="674.0" layoutY="516.0" text="Жив" visible="false" />
+      <Label fx:id="stateLabel5" layoutX="482.0" layoutY="516.0" text="Жив" visible="false" />
+      <Label fx:id="stateLabel6" layoutX="75.0" layoutY="437.0" text="Жив" visible="false" />
+      <Button fx:id="startButton" layoutX="544.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleButtonActionStart" text="Начать" />
+      <Label fx:id="killLabel" layoutX="653.0" layoutY="404.0" prefHeight="17.0" prefWidth="0.0" />
+      <Label fx:id="voteLabel" layoutX="445.0" layoutY="404.0" />
+      <Label fx:id="infoConLabel" alignment="CENTER" layoutX="448.0" layoutY="281.0" />
+      <Label fx:id="disconnectLabel" alignment="CENTER" layoutX="653.0" layoutY="437.0" />
+      <Label fx:id="nameLabel" layoutX="14.0" layoutY="624.0" />
+      <Label fx:id="roleLabel" layoutX="14.0" layoutY="659.0" />
+   </children>
+</AnchorPane>
