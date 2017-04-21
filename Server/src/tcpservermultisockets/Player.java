@@ -203,6 +203,9 @@ public class Player {
                                 if (parsedCommand[1].equals("name")) {
                                     name = parsedCommand[2];
                                 }
+                                if (parsedCommand[1].equals("exit")) {
+                                    close();
+                                }
                             } else {
                                 server.sendAllData(data);
                             }
@@ -376,7 +379,7 @@ public class Player {
             System.arraycopy(data, 6, unmarkedData, 0, result);
             return unmarkedData;
         } catch (Exception ex) {
-            System.out.println(result + ex.toString() + "Анмаркед окоянный");
+            //System.out.println(result + ex.toString() + "Анмаркед окоянный");
         }
         return null;
     }
